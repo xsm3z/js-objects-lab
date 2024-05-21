@@ -18,9 +18,9 @@ const game = {
       { name: "rare candy", quantity: 99 },
     ],
   }
-  console.dir(pokemon, { maxArrayLength: null })    //exercise 1
+  //console.dir(pokemon, { maxArrayLength: null })    //exercise 1
 
-  console.log(game) //exercise 2
+  //console.log(game) //exercise 2
 
   /*
 Exercise 3
@@ -31,6 +31,8 @@ Exercise 3
 Solve Exercise 3 here:
 */
 
+//game.difficulty = 'Hard';
+
 /*
 Exercise 4
 1. Select a starter Pokémon from the `pokemon` array. Remember, a starter Pokémon's `starter` property is true.
@@ -39,6 +41,10 @@ Exercise 4
 
 Solve Exercise 4 here:
 */
+
+const starterPokemon = pokemon[3];
+game.party.push(starterPokemon);
+//console.log(game.party);
 
 /*
 Exercise 5
@@ -49,6 +55,9 @@ Exercise 5
 Solve Exercise 5 here:
 */
 
+game.party.push(pokemon[33], pokemon[129], pokemon[150]);
+console.log(game.party);
+
 /*
 Exercise 6
 1. Arrange the Pokémon in `game.party` by their HP. The one with the highest HP should come first.
@@ -57,6 +66,8 @@ Exercise 6
 
 Solve Exercise 6 here:
 */
+
+
 
 /*
 Exercise 7
