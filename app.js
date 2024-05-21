@@ -44,7 +44,7 @@ Solve Exercise 4 here:
 
 const starterPokemon = pokemon[3];
 game.party.push(starterPokemon);
-//console.log(game.party);
+//console.log(game.party)
 
 /*
 Exercise 5
@@ -55,8 +55,8 @@ Exercise 5
 Solve Exercise 5 here:
 */
 
-game.party.push(pokemon[33], pokemon[129], pokemon[150]);
-console.log(game.party);
+game.party.push(pokemon[33], pokemon[129], pokemon[148]);
+//console.log(game.party)
 
 /*
 Exercise 6
@@ -67,7 +67,8 @@ Exercise 6
 Solve Exercise 6 here:
 */
 
-
+game.party.sort((a, b) => (b.hp - a.hp));
+//console.log(game.party)
 
 /*
 Exercise 7
@@ -77,6 +78,13 @@ Exercise 7
 
 Solve Exercise 7 here:
 */
+
+for (let i = 0; i < game.gyms.length; i++) {
+  if (game.gyms[i].difficulty < 3) {
+    game.gyms[i].completed = true;
+  }
+}
+//console.log(game.gyms)
 
 /*
 Exercise 8
@@ -94,6 +102,10 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 Solve Exercise 8 here:
 */
 
+game.party[3] = pokemon[4];
+//console.log(game.party);
+
+
 /*
 Exercise 9
 1. Print the name of each Pokémon in your party.
@@ -101,6 +113,10 @@ Exercise 9
 
 Solve Exercise 9 here:
 */
+
+for (let party of game.party) {
+  console.log(party);
+}
 
 /*
 Exercise 10
@@ -110,6 +126,12 @@ Exercise 10
 
 Solve Exercise 10 here:
 */
+
+for (let pokemons of pokemon) {
+  if (pokemons.starter === true) {
+    console.log(pokemons.name);
+  }
+}
 
 /*
 Exercise 11
@@ -122,6 +144,8 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 
 Solve Exercise 11 here:
 */
+
+
 
 /*
 Exercise 12
