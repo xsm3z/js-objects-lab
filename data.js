@@ -111,7 +111,7 @@ const pokemon = [
     { number: 109, name: "Koffing", type: "poison", hp: 40, starter: false },
     { number: 110, name: "Weezing", type: "poison", hp: 65, starter: false },
     { number: 111, name: "Rhyhorn", type: "ground", hp: 80, starter: false },
-    { number: 112, name: "Rhydon", type: "ground", hp: 105, starter: false },
+    { number: /*  */112, name: "Rhydon", type: "ground", hp: 105, starter: false },
     { number: 113, name: "Chansey", type: "normal", hp: 250, starter: false },
     { number: 114, name: "Tangela", type: "grass", hp: 65, starter: false },
     { number: 115, name: "Kangaskhan", type: "normal", hp: 105, starter: false },

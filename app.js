@@ -18,7 +18,7 @@ const game = {
       { name: "rare candy", quantity: 99 },
     ],
     catchPokemon(pokemonObj) {
-      this.party.push(pokemonObj);
+      game.party.push(pokemonObj);
       game.items[1].quantity -=1
     }
   }
@@ -166,15 +166,15 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 Solve Exercise 12 here:
 */
 
-game.catchPokemon = function(pokemonObj) {
-  this.party.push(pokemonObj);
+game.catchPokemon = function catchPokemon(pokemonObj) {
+  game.party.push(pokemonObj);
   game.items[1].quantity -=1;
 }
 
 const wantToCatch2 = pokemon[150];
 game.catchPokemon(wantToCatch2);
-console.log(game.items);
-console.log(game.party);
+//console.log(game.items);
+//console.log(game.party);
 
 /*
 Exercise 13
@@ -189,7 +189,7 @@ for (let i = 0; i < game.gyms.length; i++) {
     game.gyms[i].completed = true;
   }
 }
-console.log(game.gyms);
+//console.log(game.gyms);
 
 /*
 Exercise 14
@@ -214,6 +214,19 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 Solve Exercise 14 here:
 */
 
+game.gymStatus = function gymStatus() {
+  const gymTally = {completed: 0, incomplete: 0};
+  for (let gym of game.gyms) {
+    if (gym.completed) {
+      gymTally.completed++;
+    } else {
+      gymTally.incomplete++;
+    }
+  }
+  console.log(gymTally);
+}
+game.gymStatus();
+
 /*
 Exercise 15
 1. Add a `partyCount` method to `game` that counts the number of Pokémon in your party.
@@ -226,7 +239,10 @@ This method should:
 Solve Exercise 15 here:
 */
 
-
+game.partyCount = function partyCount() {
+  return game.party.length;
+}
+//console.log(game.partyCount())
 
 /*
 Exercise 16
@@ -236,16 +252,20 @@ Exercise 16
 Solve Exercise 16 here:
 */
 
+for (let i = 0; i < game.gyms.length; i++) {
+  if (game.gyms[i].difficulty < 8) {
+    game.gyms[i].completed = true;
+  }
+}
+
 /*
 Exercise 17
 1. Log the entire `game` object to the console. Take a moment to review the changes you've made throughout the exercises.
 
-
 Solve Exercise 17 here:
 */
 
-
-
+console.log(game);
 
 
 
