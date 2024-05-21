@@ -17,6 +17,10 @@ const game = {
       { name: "pokeball", quantity: 8 },
       { name: "rare candy", quantity: 99 },
     ],
+    catchPokemon(pokemonObj) {
+      this.party.push(pokemonObj);
+      game.items[1].quantity -=1
+    }
   }
   //console.dir(pokemon, { maxArrayLength: null })    //exercise 1
 
@@ -145,7 +149,9 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 11 here:
 */
 
-
+const wantToCatch = pokemon[111];
+game.catchPokemon(wantToCatch);
+//console.log(game.party);
 
 /*
 Exercise 12
@@ -160,6 +166,16 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 Solve Exercise 12 here:
 */
 
+game.catchPokemon = function(pokemonObj) {
+  this.party.push(pokemonObj);
+  game.items[1].quantity -=1;
+}
+
+const wantToCatch2 = pokemon[150];
+game.catchPokemon(wantToCatch2);
+console.log(game.items);
+console.log(game.party);
+
 /*
 Exercise 13
 1. Similar to Exercise 7, now complete gyms with a difficulty below 6. How will you approach this?
@@ -167,6 +183,13 @@ Exercise 13
 
 Solve Exercise 13 here:
 */
+
+for (let i = 0; i < game.gyms.length; i++) {
+  if (game.gyms[i].difficulty < 7) {
+    game.gyms[i].completed = true;
+  }
+}
+console.log(game.gyms);
 
 /*
 Exercise 14
@@ -202,6 +225,8 @@ This method should:
 
 Solve Exercise 15 here:
 */
+
+
 
 /*
 Exercise 16
